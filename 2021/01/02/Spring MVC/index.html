@@ -391,7 +391,8 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h2 id="1、介绍"><a href="#1、介绍" class="headerlink" title="1、介绍"></a>1、介绍</h2><p>​        Spring MVC是一个基于Java的实现了MVC设计模式的请求驱动类型的轻量级Web框架，通过把Model，View，Controller分离，将web层进行职责解耦，把复杂的web应用分成逻辑清晰的几部分，简化开发，减少出错，方便组内开发人员之间的配合。</p>
-<h2 id="2、Spring-MVC核心流程"><a href="#2、Spring-MVC核心流程" class="headerlink" title="2、Spring MVC核心流程"></a>2、Spring MVC核心流程</h2><ul>
+<h2 id="2、Spring-MVC核心流程"><a href="#2、Spring-MVC核心流程" class="headerlink" title="2、Spring MVC核心流程"></a>2、Spring MVC核心流程</h2><p><img src="/images/springMVC%E5%A4%84%E7%90%86%E6%B5%81%E7%A8%8B.png" alt="springMVC处理流程"></p>
+<ul>
 <li>用户发送请求至前端控制器DispatcherServlet；</li>
 <li>DispatcherServlet收到请求后，调用HandlerMapping处理器映射器，请求获取Handler；</li>
 <li>处理器映射器根据请求url找到具体的处理器Handler，生成处理器对象及处理器拦截器(如果有则生成)，一并返回给DispatcherServlet；</li>
