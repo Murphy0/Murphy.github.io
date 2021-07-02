@@ -397,7 +397,7 @@
  * 2：属性赋值
  * 3：引用
  *
- * 若单例模式中，不使用volatile修饰，并发情况下，可能回出现当前引用已经有值，
+ * 若单例模式中，不使用volatile修饰，并发情况下，可能会出现当前引用已经有值，
  * 但是该对象并未属性赋值完成的情况，此种情况下，会出现问题
  */</span>
 <span class="token class-name">Echo</span> echo <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Echo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
@@ -423,7 +423,7 @@
 <li><code>synchronized</code>是同步锁，同步块内的代码相当于同一时刻单线程执行，故不存在原子性和指令重排序的问题。</li>
 <li><code>synchronized</code>关键字的语义JMM有两个规定，保证其实现内存可见性：<ul>
 <li>线程解锁前，必须把共享变量的最新值刷新到主内存中；</li>
-<li>线程加锁前，将清空工作内存中共享变量的值，从主内存中冲洗取值。</li>
+<li>线程加锁前，将清空工作内存中共享变量的值，从主内存中重新取值。</li>
 </ul>
 </li>
 </ul>
